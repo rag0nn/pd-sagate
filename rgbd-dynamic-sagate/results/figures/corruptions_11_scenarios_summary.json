@@ -1,0 +1,83 @@
+{
+  "sample_test_idx": 12,
+  "frame_index": 30,
+  "scenarios": [
+    {
+      "tag": "clean",
+      "title": "1. Temiz (Clean)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "depth_holes@s1",
+      "title": "2. Depth Holes s1 (%15 Delik)",
+      "hole_pct": 15.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "depth_holes@s2",
+      "title": "3. Depth Holes s2 (%30 Delik)",
+      "hole_pct": 30.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "depth_holes@s3",
+      "title": "4. Depth Holes s3 (%50 Delik)",
+      "hole_pct": 50.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "axial_noise@s1",
+      "title": "5. Axial Noise s1 (2x Kinect z\u00b2)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 3.5054543018341064,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "axial_noise@s2",
+      "title": "6. Axial Noise s2 (5x Kinect z\u00b2)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 8.763635635375977,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "axial_noise@s3",
+      "title": "7. Axial Noise s3 (10x Kinect z\u00b2)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 17.527271270751953,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "low_light@s2",
+      "title": "8. Low-Light s2 (\u03b3=2.5 + G\u00fcr\u00fclt\u00fc)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.2317895144224167
+    },
+    {
+      "tag": "low_light@s3",
+      "title": "9. Low-Light s3 (\u03b3=3.2 A\u015f\u0131r\u0131 Karanl\u0131k)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.19917264580726624
+    },
+    {
+      "tag": "motion_blur@s2",
+      "title": "10. Motion Blur s2 (L=9 Bulan\u0131kl\u0131k)",
+      "hole_pct": 0.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.43178775906562805
+    },
+    {
+      "tag": "mixed@s2",
+      "title": "11. Mixed s2 (Sol Karanl\u0131k / Sa\u011f Delik)",
+      "hole_pct": 25.0,
+      "depth_rmse_cm": 0.0,
+      "rgb_mean_intensity": 0.33403366804122925
+    }
+  ]
+}

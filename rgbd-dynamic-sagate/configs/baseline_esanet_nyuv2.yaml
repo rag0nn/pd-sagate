@@ -1,0 +1,32 @@
+# Baseline ESANet-R34-NBt1D configuration on NYU Depth V2 (795 train / 654 test)
+experiment:
+  name: baseline_esanet_r34_nyuv2
+  seed: 42
+  seeds_eval: [42, 123, 999]
+
+dataset:
+  name: nyuv2
+  mat_path: data/nyu_depth_v2_labeled.mat
+  num_classes: 40
+  height: 480
+  width: 640
+  depth_mode: refined
+  aug_scale: [1.0, 1.4]
+
+model:
+  arch: ESANet-R34-NBt1D
+  encoder_rgb: resnet34
+  encoder_depth: resnet34
+  encoder_block: NonBottleneck1D
+  channels_decoder: [512, 256, 128]
+  nr_decoder_blocks: [3, 3, 3]
+  context_module: ppm
+  upsampling: learned-3x3-zeropad
+  fusion: se
+  pretrained_ckpt: third_party/ESANet/trained_models/nyuv2/r34_NBt1D.pth
+
+evaluation:
+  batch_size: 8
+  amp: true
+  corruption_seed: 2024
+  paper_reported_mIoU: 50.30

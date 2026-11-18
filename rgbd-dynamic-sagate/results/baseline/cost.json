@@ -1,0 +1,9 @@
+{
+ "params_M": 46.95584,
+ "GFLOPs": 90.250063872,
+ "latency_ms": 59.09158447265625,
+ "latency_std_ms": 14.449400790116844,
+ "fps": 16.922883502349393,
+ "peak_vram_MB": 390.73779296875,
+ "device": "NVIDIA GeForce RTX 3050 Laptop GPU"
+}

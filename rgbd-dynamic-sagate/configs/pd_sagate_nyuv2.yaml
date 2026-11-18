@@ -1,0 +1,44 @@
+# Proposed Physics-Prior & QMF-Calibrated Dynamic SA-Gate (PD-SAGate) on NYUv2
+experiment:
+  name: pd_sagate_esanet_r34_nyuv2
+  balanced_pack:
+    V2_mask_only_seeds: [42]
+    V3_phys_sagate_seeds: [42]
+    V4_pd_sagate_seeds: [42, 123, 999]
+
+dataset:
+  name: nyuv2
+  mat_path: data/nyu_depth_v2_labeled.mat
+  num_classes: 40
+  height: 480
+  width: 640
+  depth_mode: refined
+  aug_scale: [1.0, 1.4]
+
+model:
+  arch: ESANet-R34-NBt1D
+  fusion: pd_sagate
+  pdsagate_stages: [0, 1, 2, 3, 4]
+  pdsagate_cfg:
+    mode: full
+    use_prior: true
+    use_dynamic_skip: true
+    tau: 0.28
+    gate_temperature: 0.05
+    alpha_init: 6.0
+    beta_init: 0.15
+    gamma_scale_init: 2.0
+    eps_d: 0.001
+    refine_type: dw
+
+training:
+  epochs: 3
+  batch_size: 2
+  accum_steps: 4
+  lr_fusion: 0.0002
+  lr_decoder: 0.00002
+  weight_decay: 0.0001
+  lambda_qmf: 0.10
+  corruption_prob: 0.65
+  train_decoder: false
+  amp: true

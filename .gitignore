@@ -1,0 +1,15 @@
+/notes.md
+/yzm5110_antigravity_master_prompt.md
+/third_party
+/specs
+/papers
+/data
+/archive
+rgbd-dynamic-sagate/data
+rgbd-dynamic-sagate/results/checkpoints
+rgbd-dynamic-sagate/third_party
+rgbd-dynamic-sagate/report
+rgbd-dynamic-sagate/src/datasets
+*.csv
+*.pth
+
